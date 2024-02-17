@@ -37,6 +37,7 @@ h2 {
 .movie-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   flex-direction: row;
   padding: 0%;
   max-width: 100%;
@@ -45,11 +46,11 @@ h2 {
   gap: 0%;
   overflow-x: auto;
   max-height: 25%;
-  scale: 1;
+  scale: 0.6;
 }
 
 .movie-card {
-  scale: 1;
+  scale: 1.4;
   margin: 0px;
   padding: 0px;
   width: 100%;
@@ -68,7 +69,7 @@ h2 {
 }
 
 .movie-poster img {
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  max-width: 100%; 
   border-radius: 10px;
   scale: 1.5;
   padding-left: 25vw;
@@ -83,17 +84,17 @@ h2 {
 
 .movie-poster-details h3 {
   font-size: 18px;
-  color: #ffffff; /* Optionally, you can define the color here */
+  color: #ffffff; 
 }
 
 .movie-poster-details p {
   font-size: 14px;
-  color: #ffffff; /* Optionally, you can define the color here */
+  color: #ffffff; 
 }
 
 
 .movie-card:click {
-  transform: scale(1);
+  transform: scale(0.2);
 }
 
 .movie-card img {
@@ -105,9 +106,6 @@ h2 {
   display: none; 
 }
 
-.movie-card:hover .description {
-  display: block; 
-}
 
 .movie-details {
   flex-grow: 1; 
