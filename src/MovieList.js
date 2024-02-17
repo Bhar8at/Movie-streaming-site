@@ -3,8 +3,6 @@ import './App.css';
 
 function MovieList({ movies }) {
   return (
-    <div className="movie-list">
-      <h2>All movies</h2>
       <ul className='movie-list'>
         {movies.map(movie => (
           <li key={movie.id} className='movie-card'>
@@ -17,7 +15,6 @@ function MovieList({ movies }) {
           </li>
         ))}
       </ul>
-    </div>
   );
 }
 

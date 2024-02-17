@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieList from './MovieList.js';
 import './App.css'; // Import CSS file
+import Card from './Card.js';
 
 const API_KEY = '6ff0f3dc5208e5952929e413f480d0a5';
 const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
@@ -26,19 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      {randomMovie && (
-        <div className='random-movie'>
-        <h3> Movie Streaming Platform</h3>
-          <div className='movie-poster'>
-            <img src={`https://image.tmdb.org/t/p/w500${randomMovie.poster_path}`} alt={randomMovie.title} />
-            <div className='movie-poster-details'>
-              <h3>{randomMovie.title}</h3>
-              <p>{randomMovie.release_date}</p>
-              <p className="description">{randomMovie.overview}</p>
-            </div>
-          </div>
-        </div>
-      )}
+    <Card Movie = {randomMovie}/>
       <div className='movie-list-container'>
         <MovieList movies={movies} />
       </div>
