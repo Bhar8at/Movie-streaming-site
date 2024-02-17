@@ -34,9 +34,17 @@ const styles = {
     color: '#ffffff',
   }
 };
+
+// Function to map genre IDs to their names
+const mapGenreIdsToNames = (genreIds, genres) => {
+    return genreIds.map(genreId => {
+      const genre = genres.find(genre => genre.id === genreId);
+      return genre ? genre.name : '';
+    }).filter(Boolean).join(', ');
+  };
   
 
-const Card = ({ Movie, children }) => {
+const Card = ({ Movie, children, genres }) => {
   return (
    
       
@@ -57,8 +65,7 @@ const Card = ({ Movie, children }) => {
             <div className='movie-poster-details'>
               <h3>{Movie.title}</h3>
               <p>{Movie.release_date}</p>
-              <p>{Movie.synopsis}</p>
-              <p>{Movie.genre}</p>
+              <p>{mapGenreIdsToNames(Movie.genre_ids, genres)}</p>
             </div>
               <p>{Movie.overview}</p>
             </div>
