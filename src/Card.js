@@ -57,6 +57,8 @@ const Card = ({ Movie, children }) => {
             <div className='movie-poster-details'>
               <h3>{Movie.title}</h3>
               <p>{Movie.release_date}</p>
+              <p>{Movie.synopsis}</p>
+              <p>{Movie.genre}</p>
             </div>
               <p>{Movie.overview}</p>
             </div>

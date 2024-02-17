@@ -27,6 +27,15 @@ body {
 }
 
 
+.App {
+  height: 150vh; /* Set the height of the App container to fill the viewport */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.movie-list-container {
+  padding-top: 0;
+}
+
 h2 {
   margin: 0;
   padding: 0;
@@ -45,7 +54,7 @@ h2 {
   display: flex;
   gap: 0%;
   overflow-x: auto;
-  max-height: 25%;
+  max-height: 50%;
   scale: 0.6;
 }
 
@@ -59,6 +68,7 @@ h2 {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 
 .movie-poster {
   height: 60vh;
@@ -104,26 +114,6 @@ h2 {
 
 .description {
   display: none; 
-}
-
-
-.movie-details {
-  flex-grow: 1; 
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.movie-details h3 {
-  display: contents;
-  font-size: 16px; 
-  margin-bottom: 5px;
-}
-
-.movie-details p {
-  font-size: 14px; 
-  margin: 0;
-  color: #00FFFF ; 
 }
 
 

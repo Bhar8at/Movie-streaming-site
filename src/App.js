@@ -32,6 +32,7 @@ function App() {
     setRandomMovie(clickedMovie);
   };
 
+
   return (
     <div className="App">
       <Card Movie={randomMovie} />
